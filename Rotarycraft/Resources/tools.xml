@@ -1,4 +1,13 @@
-﻿<?xml version="1.0"?>
+<!--
+  @author Reika Kalseki
+  
+  Copyright 2018
+  
+  All rights reserved.
+  Distribution of the software in any form is only allowed with
+  explicit, prior permission from the owner.
+-->
+<?xml version="1.0"?>
 <tools>
 	<spring>
 		The wind spring is used to store mechanical energy. Once wound up with the coil winder, it can be used in another winder to provide a small amount of power, or it can be used to run various tools. Note that when charging coils, they run the risk of breaking, a risk which gets larger and larger as they are wound tighter and tighter.
@@ -77,4 +86,14 @@
 	<disk>
 		The music disc allows you to copy music between music boxes. Right-click a programmed music box with an empty disk to create a written copy; right-clicking a music box with a written disk will overwrite the music box with the disk contents.
 	</disk>
+	<upgrades>
+		<sub>
+			<s0>
+				Various machines can be upgraded in place, either to another machine/engine entirely or with simple functionality improvements. These are applied with a simple right-click on the machine, and are usually kept when broken, and dropped again if not.
+			</s0>
+			<s1>
+				%s
+			</s1>
+		</sub>
+	</upgrades>
 </tools>

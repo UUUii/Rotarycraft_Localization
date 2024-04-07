@@ -1,33 +1,37 @@
-﻿<?xml version="1.0"?>
+<!---->
+<?xml version="1.0"?>
 <categories>
 	<intro>
-		An introduction to nuclear reactions, nuclear reactors and their design.
+		介绍核反应、核反应堆及其设计。
 	</intro>
 	<procdesc>
-		These machines are used to process existing materials into ones needed for making functional reactors.
+		这些机器用于将现有材料加工成制造反应堆所需的材料。
 	</procdesc>
 	<gendesc>
-		These machines harness the power of a nuclear reactor, and work together to convert it into usable shaft power.
+		这些机器将核反应堆的动力转化为可用的轴动力。
 	</gendesc>
 	<htgrdesc>
-		These are the components to a High-Temperature Gas Reactor (HTGR).
+		这些是高温气体反应堆 (HTGR) 的组件.
 	</htgrdesc>
 	<fissiondesc>
-		These are the components to a standard boiling-water fission reactor.
+		这些是标准沸水裂变反应堆的组件。
 	</fissiondesc>
 	<breederdesc>
-		These are the components to a sodium-cooled breeder reactor, or "liquid-metal fast breeder reactor" (LMFBR).
+		这些是钠冷增殖反应堆或“液态金属快增殖反应堆”（LMFBR）的组件。
 	</breederdesc>
+	<thoriumdesc>
+		这些是液态钍反应堆的组件。它是裂变反应堆，但是其他相似类型的设计明显不同。
+	</thoriumdesc>
 	<fusiondesc>
-		These are the components to a Tokamak fusion reactor.
+		这些是托卡马克磁约束核聚变反应堆的组件。
 	</fusiondesc>
 	<accdesc>
-		These machines are often required alongside the actual reactor, to produce or transport materials or to otherwise aid the reactors.
+		这些机器通常需要与反应堆一起使用，以生产或运输材料或以其他方式帮助反应堆。
 	</accdesc>
 	<tooldesc>
-		These tools are useful to those working with nuclear reactors.
+		这些工具对那些操作核反应堆的人很有用.
 	</tooldesc>
 	<resourcedesc>
-		These items are crucial in the operation of nuclear reactors.
+		这些物品对核反应堆的运行至关重要。
 	</resourcedesc>
 </categories>

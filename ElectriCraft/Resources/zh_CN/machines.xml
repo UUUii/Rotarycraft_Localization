@@ -1,11 +1,13 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <machines>
 	<generator>
 		<desc>
-			发电机可以将轴旋转产生的动能转化为�电能。其电流输出量与输入扭矩大小成正比,而输出电压则与转速成正比,同时总输出保持不变.本机器工作时不会有损耗.
+			发电机可以将轴旋转产生的动能转化为电能。其电流输出量与输入扭矩大小成正比,而输出电压则与转速成正比,同时总输出保持不变.本机器工作时不会有损耗.
 		</desc>
 		<note>
 			需求%dNm/A,每rad/s产生%dV
+			
+			不能处理过大的电压和电流
 		</note>
 	</generator>
 	<motor>
@@ -13,10 +15,11 @@
 			马达可将电能重新转换为轴产生的旋转动能,其转换比例和发电机的正好相反.和发电机类似,马达工作时没有损耗;只需为其提供电力,即可产生一开始输入的扭矩和转速.特别需要说明的是,马达可连接的电源数有限,超出的部分会以热的形式浪费掉.
 		</desc>
 		<note>
-			电源数限制:
+			电源数限制:（只能用一个锭升级）
 			默认:1
-			感应升级:2
-			钨升级:4
+			感应锭升级:2
+			钨锭升级:4
+			基岩合金锭升级: 1000
 		</note>
 	</motor>
 	<wire>
@@ -37,7 +40,7 @@
 	</relay>
 	<resistor>
 		<desc>
-			电阻在电路中可起限流作用.若通过电阻的电流会超过电阻器允许的范围,其超出部分会从其它可能路径中流出.电阻值可由其身上的三个色带读出,每种颜色都对应一个0-9的电阻值.前两个色带分别对应are the 10s and 1s places;第三条色带是a multiplier, adding its value in zeros to the end.使用染料可为其染色.
+			电阻在电路中可起限流作用.若通过电阻的电流会超过电阻器允许的范围,其超出部分会从其它可能路径中流出.电阻值可由其身上的三个色带读出,每种颜色都对应一个0-9的电阻值.前两个色带分别对应着数位上的前两个数;第三条色带是一个乘数, 它代表了阻值后面有几个零.使用染料可为其染色.
 		</desc>
 		<note>
 			颜色-电阻对照表:
@@ -46,24 +49,32 @@
 			红 = 2
 			橙 = 3
 			黄 = 4
-			绿 = 5
+			青 = 5
 			蓝 = 6
 			紫 = 7
 			灰 = 8
 			白 = 9
 		</note>
 	</resistor>
+	<preciseresistor>
+		<desc>
+			精密电阻是基础电阻的升级版;它使用三个控件来选择数字而不是两个。
+		</desc>
+		<note>
+			与基础电阻器相同的颜色对应相同的值
+		</note>
+	</preciseresistor>
 	<battery>
 		<desc>
 			电池可以储存电力,可用作缓冲,也可用于长期储存电力.电池有数个不同等级;每个等级的电池,相比于上一个等级,都有容量和输出上的提升.单个电池的输出电流,电压和总电量是一定的.电池被拆除时会保存电量.它们从侧面接受电力输入,并在有红石信号输入时,从顶面输出电力.
 		</desc>
 		<note>
-			
+			%s
 		</note>
 	</battery>
 	<transformer>
 		<desc>
-			变压器可借助安装于其一侧的线圈来改变流经其的电力之电流与电压大小.电流与电压的变更量由输入端与输出端的线圈数量比决定;比值大于1时, such as 1:8,可导致电流增大,而比值小于1时,such as 2:5,则会导致电压提升. Note that as the ratio gets farther from one, the efficiency drops and the wasted energy is dissipated as heat. Excessive temperatures (larger than %dC) or excessive currents (larger than %dA) will cause the transformer to violently fail.
+			变压器可借助安装于其一侧的线圈来改变流经其的电力之电流与电压大小.电流与电压的变更量由输入端与输出端的线圈数量比决定;比值大于1时, 例如 1:8,可导致电流增大,而比值小于1时,例如 2:5,则会导致电压提升. 需要注意的是，随着转换比的增大，转换效率将会下降，浪费的能量将作为热量耗散。积热过多(大于 %dC)或电流过大(大于 %dA)将会导致变压器故障。
 		</desc>
 		<note>
 			可用散热片或液氮散热.
@@ -71,7 +82,7 @@
 	</transformer>
 	<meter>
 		<desc>
-			The electric meter, if spliced into a wire, will display the current, voltage, and power flowing through that wire. It has no effect on the actual power throughput, making it function similarly to a dynamometer.
+			EU 电池,又名 RBSU,可存储大量能量 - 高达 %.0f EU - 并且可以以大电流输出。它可以从两侧输入,并将其输出到顶部。电总是可以从顶部输出出来,但是红石信号会使电池尝试将电对任何可用的接收器输出。
 		</desc>
 		<note>
 			
@@ -79,15 +90,23 @@
 	</meter>
 	<rfbattery>
 		<desc>
-			The RF battery stores RF like any other RF storage device. However, unlike other devices, its specialized energy crystal allows it to store an enormous amount of energy, up to %d RF. It can take RF in the sides, and will output it out the top. Power can always be "pulled" out the top, but a redstone signal will make the battery try and push power to any available receivers.
+			RF电池像任何其他RF存储设备一样可以存储RF。然而,与其他设备不同的是,它有专用的能量晶体允许它储存更加大量能量,高达 %d RF。它可以在侧面接收RF,并从顶部输出。电源总是可以从顶部输出RF,而红石信号会使电池尝试将电源输出到任何可用的接收器。
 		</desc>
 		<note>
-			The bar on the side is a fill bar with logarithmic scaling
+			侧面的条是显示存储进度的
 		</note>
 	</rfbattery>
+	<eubattery>
+		<desc>
+			EU 电池,又名 RBSU,可存储大量能量 - 高达 %.0f EU - 并且可以以大电流输出。它可以从侧面输入EU,并将其从顶部输出。电源总是可以从顶部输出,而红石信号会使电池尝试将电源向任何可用的接收器输出。
+		</desc>
+		<note>
+			侧面的条是显示存储进度的
+		</note>
+	</eubattery>
 	<cable>
 		<desc>
-			The RF Transfer cable is a specialized wire for transferring RF energy. It can transmit an unlimited amount of RF per tick, with the actual maximum of the network being fully customizable.
+			RF传输电缆是一种用于传输RF能量的专用电线。它可以在每tick中传输无限量的 RF,传输网络的最大值可以自行操纵。
 		</desc>
 		<note>
 			
@@ -95,12 +114,20 @@
 	</cable>
 	<eusplit>
 		<desc>
-			The EU splitter is designed to take extremely large EU power sources, such as turbine generators, and split them into smaller, more managable current (EU/t) levels to avoid melting the more delicate wires like the glass fiber cable.
+			EU 分流器是在采用超大输出的 EU 电源——例如涡轮发电机——时,将它们分成更小、更易于管理的电压 (EU/t) 级别,以避免烧毁脆弱的导线。
 		</desc>
 		<note>
-			Multiple yellow dots marks the input; Orange dots mark output sides. Use the screwdriver to toggle sides between output and paneling
+			黄色圆点为输入;橙色圆点为输出。使用螺丝刀以切换输入和输出
 		</note>
 	</eusplit>
+	<wirelesspad>
+		<desc>
+			能量传输器以无线方式将RF能量从自身传输到目标方块,它允许你埋地线或者走墙线。更好的材料会拥有更大的吞吐量和更高的效率。
+		</desc>
+		<note>
+			%s
+		</note>
+	</wirelesspad>
 	<name>
 		<desc>
 			

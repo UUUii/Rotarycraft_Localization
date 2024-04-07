@@ -128,6 +128,16 @@ machine.centrifuge=Centrifuge
 machine.bedpipe=Bedrock Pipe
 machine.drying=Drying Bed
 machine.wetter=Liquefaction Machine
+machine.drops=Block Drop Processor
+machine.itemfilter=Item Filter
+machine.hydrator=Soil Hydrator
+machine.filler=Block Filler
+machine.gatling=Gatling Gun
+machine.spillway=Spillway
+machine.flameturret=Flamethrower Turret
+machine.bundledbus=Bundled-Signaled ME Extractor
+machine.distribclutch=Shaft Distribution Clutch
+machine.splitbelt=Take-off Belt
 
 engine.dc=DC Electric Engine
 engine.wind=Wind Turbine
@@ -141,10 +151,13 @@ engine.jet=Gas Turbine
 
 material.wood=Wooden
 material.stone=Stone
-material.steel=Steel
+material.steel=HSLA Steel
 material.diamond=Diamond
 material.bedrock=Bedrock
 material.hsla=HSLA Steel
+material.tungsten=Tungsten Alloy
+material.livingwood=Livingwood
+material.livingrock=Livingrock
 
 shaft.wood=Wood Shaft
 shaft.stone=Stone Shaft
@@ -153,15 +166,18 @@ shaft.diamond=Diamond Shaft
 shaft.bedrock=Bedrock Shaft
 shaft.cross=Shaft Cross
 
-flywheel.wood=Wood Flywheel
-flywheel.stone=Stone Flywheel
-flywheel.iron=Iron Flywheel
-flywheel.gold=Gold Flywheel
-
 advgear.worm=Worm Gear
 advgear.cvt=CVT Unit
 advgear.coil=Industrial Coil
 advgear.hi=High-Ratio Gear
+
+flywheel.wood=Wooden
+flywheel.stone=Stone
+flywheel.iron=Iron
+flywheel.gold=Gold
+flywheel.tungsten=Tungsten Alloy
+flywheel.depletedu=Depleted Uranium
+flywheel.bedrock=Bedrock
 
 hydraulic.pump=Hydraulic Pump
 hydraulic.turbine=Hydraulic Turbine
@@ -258,15 +274,20 @@ item.bedreveal=Bedrock Helmet of Revealing
 item.steelpack=HSLA Steel Jetpack
 item.craftpattern=Crafting Pattern
 item.rangefinder=Range Finder
+item.gearupgrade=Integrated Gearbox Upgrade
+item.springpiston=Handheld Piston
+item.voidrailgun=Voidmetal Railgun Ammo
+item.bedchisel=Bedrock Chisel
+item.beddrill=Bedrock Drill Head
 
-extract.coaldust=Coal Ore Dust
-extract.irondust=Iron Ore Dust
-extract.golddust=Gold Ore Dust
-extract.reddust=Redstone Ore Dust
-extract.bluedust=Lapis Ore Dust
-extract.diadust=Diamond Ore Dust
-extract.greendust=Emerald Ore Dust
-extract.quartzdust=Nether Quartz Dust
+extract.coaldust=Powdered Coal Ore
+extract.irondust=Powdered Iron Ore
+extract.golddust=Powdered Gold Ore
+extract.reddust=Powdered Redstone Ore
+extract.bluedust=Powdered Lapis Ore
+extract.diadust=Powdered Diamond Ore
+extract.greendust=Powdered Emerald Ore
+extract.quartzdust=Powdered Nether Quartz
 
 extract.coalslurry=Coal Ore Slurry
 extract.ironslurry=Iron Ore Slurry
@@ -306,35 +327,29 @@ crafting.cylinder=Cylinder
 crafting.radiator=Radiator
 crafting.condenser=Condenser
 crafting.goldcoil=Gold Coil
-crafting.woodgear=Wood Gear
-crafting.stonegear=Stone Gear
-crafting.diamondgear=Diamond Gear
-crafting.bedrockgear=Bedrock Gear
 crafting.paddle=Paddle Panel
-crafting.shaftcore=Shaft Core
 crafting.ignition=Ignition Unit
-crafting.diamondcore=Diamond Shaft Core
 crafting.compoundcompress=Compound Compressor
 crafting.alucylinder=Aluminum Alloy Cylinder
 crafting.highcombustor=High-Temperature Combustor
 
 crafting.panel=Base Panel
 crafting.ingot=HSLA Steel Ingot
-crafting.shaft=Shaft Unit
-crafting.gear=HSLA Steel Gear
 crafting.mount=Mount
-crafting.gear2=2x Gear Unit
-crafting.gear4=4x Gear Unit
-crafting.gear8=8x Gear Unit
-crafting.gear16=16x Gear Unit
 crafting.scrap=HSLA Steel Scrap
 crafting.ironscrap=Iron Scrap
-crafting.woodcore=Wood Flywheel Core
-crafting.stonecore=Stone Flywheel Core
-crafting.ironcore=Iron Flywheel Core
-crafting.goldcore=Gold Flywheel Core
 crafting.worm=Worm Gear
-crafting.gearunit=Gear Unit
+
+crafting.shaft=Shaft Unit
+crafting.gear=Gear
+crafting.gear2x=2x Gear Unit
+crafting.gear4x=4x Gear Unit
+crafting.gear8x=8x Gear Unit
+crafting.gear16x=16x Gear Unit
+crafting.bearing=Shaft Bearing
+crafting.shaftcore=Shaft Core
+
+crafting.flycore=Flywheel Core
 
 crafting.barrel=Heat Ray Barrel
 crafting.lens=Lens
@@ -361,14 +376,10 @@ crafting.pcb=Circuit Board
 crafting.screen=Screen
 crafting.mixer=Mixer
 crafting.saw=Saw
-crafting.bearing=Shaft Bearing
 crafting.belt=Belt
 crafting.ballbearing=Ball Bearing
 crafting.brake=Brake Disc
 crafting.coil=Tension Coil
-crafting.stoneshaft=Stone Rod
-crafting.diamondshaft=Diamond Shaft Unit
-crafting.bedrockshaft=Bedrock Shaft Unit
 
 misc.netherdust=Netherrack Dust
 misc.tar=Tar Sand
@@ -386,6 +397,7 @@ misc.redgolddust=Inductive Metal Blend
 misc.compost=Compost
 misc.silicondust=Silicon Powder
 misc.mulch=Mulch
+misc.cleansludge=Ethanol Extract
 
 misc.anthra=Anthracite
 misc.prisma=Prismane
@@ -399,6 +411,7 @@ misc.coke=Coal Coke
 misc.springingot=Spring Steel Ingot
 misc.silicon=Silicon
 misc.alualloy=Aluminum Alloy Ingot
+misc.tungalloy=Tungsten Alloy Ingot
 
 interface.slipperycomb=Slippery Comb
 interface.slipperypropolis=Slippery Propolis
@@ -417,6 +430,8 @@ upgrade.tier5=Torsion Resistance Upgrade
 upgrade.afterburn=Afterburner Upgrade
 upgrade.efficiency=Resonance Stability Upgrade
 upgrade.flux=Flux Amplitude Upgrade
+upgrade.redstone=Integrated Redstone Upgrade
+upgrade.lodestone=Permanent Magnet Upgrade
 
 label.temperature=Temperature
 label.pressure=Pressure
@@ -426,8 +441,10 @@ label.power=Power
 label.range=Range
 label.damaged=Damaged
 label.fuel=Fuel Remaining
+label.operationtime=Operation Time
 
 message.drowning=Engine is Drowning!
+message.noair=Engine needs air to operate!
 message.fod=Engine Destroyed from Animal Strikes!
 message.choke=Engine Intake is Blocked!
 message.minpower=Insufficient Power!
@@ -439,8 +456,10 @@ message.emptypipe=Pipe contains no liquid.
 
 achievement.makesteel=Steelmaker
 achievement.makesteel.desc=Make a steel ingot in the blast furnace
-achievement.rcusebook=Actually doing the research
+achievement.rcusebook=Actually Doing The Research
 achievement.rcusebook.desc=Read the handbook instead of making basic mistakes and calling it a bug
+achievement.worktable=Constructive
+achievement.worktable.desc=Build the worktable
 achievement.makeyeast=Fermenter
 achievement.makeyeast.desc=Make yeast in the fermenter
 achievement.extractor=Multiplier
@@ -521,5 +540,15 @@ achievement.doublekill=Two birds, one stone
 achievement.doublekill.desc=Kill two mobs at once with one gravel gun shot
 achievement.insanity=Insanity
 achievement.insanity.desc=Run an extractor at 1-tick operation times for all four stages
+achievement.instantbed=Insanity II
+achievement.instantbed.desc=Run a bedrock breaker at 1-tick operation times
+achievement.failsteel=Remedial Materials Science
+achievement.failsteel.desc=Waste lots of iron in making steel
+achievement.pulsefire=Pulse Jet Arsonist
+achievement.pulsefire.desc=Set your house on fire with a Pulse Jet Furnace
+achievement.dumbextractor=Not How It Works
+achievement.dumbextractor.desc=Completely fail to grasp power requirements and distribution
 
 tc.research_category.rotarycraft=RotaryCraft
+
+item.item.screwfocus.name=Wand Focus: Screwdriver

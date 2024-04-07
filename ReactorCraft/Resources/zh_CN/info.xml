@@ -1,27 +1,30 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <info>
 	<physics>
-		Nuclear reactions fall into two main types, fission and fusion. Each of these works off of Einstein's theory of relativity to generate energy from mass - E = mc^2. This energy is released as heat or as a speeding neutron. Because the value of c (the speed of light) is extremely large - 300 million meters per second - the amount of energy released is often very large, even though the mass consumption is tiny.
+		核反应有两种主要类型，裂变和聚变。它们都基于爱因斯坦的相对论，从质量中产生能量 - E = mc^2。这种能量以热量或者高速中子的形式释放。因为c（光速）的值非常大——每秒3亿米——释放的能量往往非常大，尽管发生的质量消耗很小。
 	</physics>
 	<fissioninfo>
-		In nuclear fission, a heavy atom, such as that of uranium or plutonium, is impacted with an extra neutron. This destabilizes it, and the atom soon splits into two others, releasing a large amount of energy in the process. This reaction also releases three more neutrons, which can impact three more atoms and trigger a chain reaction. The two resultant atoms are usually unwanted and hazardous waste products.
+		在核裂变中，重原子（例如铀或钚）受到额外中子的撞击。会使它不稳定，原子很快分裂成两部分，在这个过程会中释放出大量的能量。该反应还释放了另外数个中子，这会击中另外三个原子并引发连锁反应。而反应产生的两个原子通常是无用并且需要处理的危险的废物。
 	</fissioninfo>
 	<fusioninfo>
-		In nuclear fusion, two light atoms, usually hydrogen, are forced together under extreme heat and pressure until they join together. Some mass is lost in this process, releasing heat and a speeding neutron. This neutron carries a large amount of the energy from this reaction and must be captured to regain that energy. Unlike fission, fusion cannot create a chain reaction, and produces no waste, but it is much more difficult to accomplish. Most artificial fusion reactors use two hydrogen isotopes, deuterium and tritium.
+		在核聚变中，通常是由两个轻原子譬如氢，在高温高压下被迫在靠近到一起，直到它们结合在一起。在这个过程中会损失一些质量，因而释放热量和加速的中子。该中子携带了大量来自反应的能量，通过被捕获以传递能量。与裂变不同，聚变不能产生连锁反应，也不会产生废物，但要完成要困难得多。目前大多数的人工聚变反应堆使用两种氢的同位素：氘和氚。
 	</fusioninfo>
 	<basics>
-		Nuclear power plants work in fundamentally the same way as most others; the nuclear reaction generates heat, which is eventually used to boil water into steam. This steam drives a turbine and generates shaft power. Nuclear fuel is consumed rather slowly compared to most others, but it is often difficult to produce and its after-effects are often difficult to dispose of.
+		核电厂的工作方式与其他大多数电厂相同；核反应产生热量，用于将水煮沸成蒸汽。再用蒸汽驱动涡轮机并产生轴功率。与大多数其他燃料相比，核燃料的消耗速率相当缓慢，尽管它通常难以生产，而且核废料通常难以处理。
 	</basics>
 	<enrichment>
-		Uranium comes in two main varieties, U235 and U238. Only U235 is immediately useful for nuclear power, but it makes up less than 1%% of all uranium, with the rest being U238. For this reason, uranium is 'enriched', where the concentration of U235 is increased to usable levels. The U238 left over, sometimes termed 'depleted uranium', can be bombarded with neutrons to convert it into Pu239, a form of plutonium also usable in fission reactors, though with more risk and worse waste products. Depleted uranium can also be used to make high-density objects.
+		铀有两个主要同位素，U235 和 U238。只有 U235 可立即用于核电，但它占所有种类铀的比例不到 1%%，其余大多数是 U238。出于这个原因，铀需要被“浓缩”，才能将 U235 的浓度增加到可用水平。处理后剩余的 U238，常常被称为“贫铀”，可以用中子轰击将其转化为 Pu239，这种钚也可用于裂变反应堆，但风险更大，核废料更难处理。同时贫铀还可用于制造高密度物体。
 	</enrichment>
 	<meltdown>
-	If a reactor gets too hot, it will start to boil off its coolant and emit large quantities of smoke and steam. Hotter still, and it may cause the water molecules to break apart, resulting in a large accumulation of hydrogen gas. Because hydrogen gas is flammable, it can often result in an explosion that sends pieces of the reactor in all directions. Additionally, the fuel and steel structure of the fuel core itself will soften, melt and mix into a lavalike fluid called "corium", which is intensely radioactive. Meltdowns spread extreme radiation over a fairly large area.
+ 		如果反应堆变得太热，它会开始蒸发冷却剂并释放出大量的烟雾和蒸汽。再加热的话，它可能会导致水分子解离成原子，导致大量氢气积聚。又因为氢气是易燃的，所以它经常会因此发生爆炸，将反应堆的碎片散布到各个方向。此外，燃料核心的燃料和钢结构本身将会软化、熔化并混合成一种称为“象脚”的熔岩状流体，它具有很强的放射性。如果发生熔毁将会在相当大的区域产生极端辐射。
 	</meltdown>
 	<radiation>
-		Radioactivity is a dangerous property of many nuclear materials, as it will severely poison living things. Low-level radioactivity is not immediately lethal, but it can bring about unpleasant effects such as dizziness and nausea. Higher levels of radioactivity, such as those left behind after a nuclear meltdown, will kill in fairly short order. Radioactivity leaves a distinctive mark on the land, killing plants, grass, and and animals alike. Radiation cannot be cleaned manually, but will gradually decay over time, and can be washed away by rain.
+		许多核材料都具有放射性，因为它会毒害生物。低水平放射性不会立即致命，但会带来令人不快的影响，例如头晕和恶心。而较高水平的放射性，例如核熔毁后留下的放射性，将在相当短的时间内将生物杀死。放射性会在土地上留下了独特的印记，杀死一切生物。辐射无法手动清除，但会随着时间的推移逐渐衰减，并可以被雨水冲走。
 	</radiation>
+	<shielding>
+		大多数反应堆发出的高能中子会伤害甚至杀死生物，为此，几乎所有人都建议封死这样的反应堆。此外，如果发生熔毁，适当的屏障可以减少结构的破坏和致命辐射的逸散。在这方面，只有少数几类方块是有效的。
+	</shielding>
 	<structures>
-		Nuclear reactors and their parts are often large, far larger than the cubic meter in which most machines will fit. Additionally, they are often comprised of many individual parts which only form a coherent whole in a specific arrangement.
+		核反应堆及其部件通常很都大，远远大于大多数机器可以处理的体积。此外，它们通常由许多单独的部分组成，这些部分仅在特定的排列中形成一个连贯的整体。
 	</structures>
 </info>

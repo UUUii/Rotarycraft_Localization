@@ -1,4 +1,13 @@
-﻿<?xml version="1.0"?>
+<!--
+  @author Reika Kalseki
+  
+  Copyright 2018
+  
+  All rights reserved.
+  Distribution of the software in any form is only allowed with
+  explicit, prior permission from the owner.
+-->
+<?xml version="1.0"?>
 <tools>
 	<spring>
 		卷线弹簧用于存储机械能. 在卷线器内卷好后,能放入另一个卷线器来产生少量动力,或用于驱动各种工具,注意卷绕线圈时有损坏的风险,弹簧卷得越紧其风险就越大.
@@ -77,4 +86,14 @@
 	<disk>
 		音乐唱片让你能在音乐盒之间拷贝音乐.用空的唱片右击编曲完成的音乐盒即可制作一个完成的拷贝;用完成的唱片右击音乐盒即可将唱片的内容写入盒中.
 	</disk>
+	<upgrades>
+		<sub>
+			<s0>
+				众多机器可以升级而不需要移动其位置，又或者完全升级到另一台机器/引擎，抑或是进行简单的功能改进。这些都只需要一个简单的右键，而被破坏时，它将掉落。
+			</s0>
+			<s1>
+				%s
+			</s1>
+		</sub>
+	</upgrades>
 </tools>

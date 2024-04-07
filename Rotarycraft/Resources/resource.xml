@@ -1,4 +1,13 @@
-﻿<?xml version="1.0"?>
+<!--
+  @author Reika Kalseki
+  
+  Copyright 2018
+  
+  All rights reserved.
+  Distribution of the software in any form is only allowed with
+  explicit, prior permission from the owner.
+-->
+<?xml version="1.0"?>
 <resource>
 	<steelingot>
 		The steel ingot, made by smelting an iron ingot in a blast or pulse jet furnace, is the basis for all the machines, as only steel has sufficient tensile and shear strength to handle the loads applied by the machines.
@@ -43,7 +52,7 @@
 		Yeast is cultivated in the fermenter by adding sugar and water to dirt. It grows best at temperatures between 20 and 40 degrees, peaking at 25 degrees. Outside this range, it will grow slowly or not at all. Be careful - at temperatures above 60C, yeast will die. Ethanol sludge is made from adding yeast to plant matter and water. It is created most rapidly at around 35C.
 	</yeast>
 	<ethanol>
-		Ethanol crystals can be made by drying out ethanol sludge in a furnace. These crystals can then be used as fuel in the ethanol and performance engines.
+		Ethanol crystals are made from fermenting, then purifying in a centrifuge, then drying plant matter. These crystals can then be used as fuel in the ethanol and performance engines, as well as some other things.
 	</ethanol>
 	<bedingot>
 		A bedrock ingot is used in the crafting of bedrock tools, armor, and some machines.
@@ -78,4 +87,25 @@
 	<tungsten>
 		Tungsten is a byproduct of processing iron ore in the Extractor, and is used for high-temperature, high-strength, or high-pressure applications. It can only be smelted in a vanilla furnace above %dC.
 	</tungsten>
+	<coke>
+		Coal coke is a more efficient carbon source when making steel. Because of this, it can also be used as a furnace fuel, with a greater efficiency than pure coal.
+	</coke>
+	<name>
+		
+	</name>
+	<name>
+		
+	</name>
+	<name>
+		
+	</name>
+	<name>
+		
+	</name>
+	<name>
+		
+	</name>
+	<name>
+		
+	</name>
 </resource>

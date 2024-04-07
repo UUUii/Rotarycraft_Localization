@@ -9,6 +9,11 @@ machine.wiremeter=Electric Meter
 machine.rfbattery=RF Storage Battery
 machine.transformer=Transformer
 machine.eusplit=EU Splitter
+machine.eucable=Superconductor EU Cable
+machine.eubattery=EU Storage Battery (RBSU)
+machine.fuse=Fuse
+machine.wirelesspad=Wireless Energy Transfer Pad
+machine.precresistor=Precision Resistor
 
 battery.redstone=Redstone Battery
 battery.glowstone=Lustrous Battery
@@ -24,11 +29,18 @@ energycrystal.star=Auroral Energy Crystal
 energycrystal.diamond=Graphene Energy Crystal
 energycrystal.ender=Procyon Energy Crystal
 energycrystal.rf=RF Energy Crystal
+energycrystal.eu=EU Energy Crystal
 
 electricrafting.bluedust=Lapis Dust
 electricrafting.diamonddust=Diamond Dust
 electricrafting.quartzdust=Quartz Dust
 electricrafting.crystaldust=Energy Crystal Dust
+
+electrichargepad.basic=Basic
+electrichargepad.improved=Improved
+electrichargepad.advanced=Advanced
+electrichargepad.hightech=High-Tech
+electrichargepad.superconducting=Superconducting
 
 ore.copper=Copper Ore
 ore.tin=Tin Ore

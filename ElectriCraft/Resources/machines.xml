@@ -1,4 +1,13 @@
-﻿<?xml version="1.0"?>
+<!--
+  @author Reika Kalseki
+  
+  Copyright 2018
+  
+  All rights reserved.
+  Distribution of the software in any form is only allowed with
+  explicit, prior permission from the owner.
+-->
+<?xml version="1.0"?>
 <machines>
 	<generator>
 		<desc>
@@ -6,6 +15,8 @@
 		</desc>
 		<note>
 			Requires %d Nm/A, generates %dV per rad/s
+			
+			Cannot handle infinite currents or voltages
 		</note>
 	</generator>
 	<motor>
@@ -13,10 +24,11 @@
 			The motor converts electric power back into shaft power using the inverse of the ratios seen in the generator. Like the generator, the motor is usually lossless; putting power into a generator and then directly into a motor yields the original torque and speed values. The one exception is that motors can only connect to a finite number of power sources; exceeding this wastes power and generates heat.
 		</desc>
 		<note>
-			Source limits:
+			Source limits (use 1 ingot to upgrade):
 			Default: 1
 			Inductive upgrade: 2
 			Tungsten upgrade: 4
+			Bedrock upgrade: 1000
 		</note>
 	</motor>
 	<wire>
@@ -46,24 +58,32 @@
 			Red = 2
 			Orange = 3
 			Yellow = 4
-			Green = 5
+			Lime = 5
 			Blue = 6
 			Purple = 7
 			Gray = 8
 			White = 9
 		</note>
 	</resistor>
+	<preciseresistor>
+		<desc>
+			The precision resistor is a slightly upgraded version of the basic resistor; it has three bands to choose digits instead of two.
+		</desc>
+		<note>
+			Same color values as basic resistors
+		</note>
+	</preciseresistor>
 	<battery>
 		<desc>
 			Batteries store electrical power, acting as a buffer or long-term storage. There are several tiers of batteries; each tier has more capacity and output power than the last. The output current, voltage, and power of a battery are constant. Batteries retain their charge when moved. They can take power in the sides, and will output it from their top when supplied with a redstone signal.
 		</desc>
 		<note>
-			
+			%s
 		</note>
 	</battery>
 	<transformer>
 		<desc>
-			Using coils on each side, the transformer changes the ratio of voltage to current across it. The ratio of coils on the input side to the output side determines the change in voltage/current; ratios larger than one, such as 1:8, favor an increased current, while ratios less than one, such as 2:5, favor increased voltage. Note that as the ratio gets farther from one, the efficiency drops and the wasted energy is dissipated as heat. Excessive temperatures (larger than %dC) or excessive currents (larger than %dA) will cause the transformer to violently fail.
+			Using coils on each side, the transformer changes the ratio of voltage to current across it. The ratio of coils on the input side to the output side determines the change in voltage/current; ratios less than one, such as 1:8, favor an increased current, while ratios larger than one, such as 5:2, favor increased voltage. Note that as the ratio gets farther from one, the efficiency drops and the wasted energy is dissipated as heat. Excessive temperatures (larger than %dC) or excessive currents (larger than %dA) will cause the transformer to violently fail.
 		</desc>
 		<note>
 			Can be cooled with fins or liquid nitrogen
@@ -85,6 +105,14 @@
 			The bar on the side is a fill bar with logarithmic scaling
 		</note>
 	</rfbattery>
+	<eubattery>
+		<desc>
+			The EU battery, aka the RBSU, stores massive quantities of energy - up to %.0f EU - and can output it in a large current. It can take EU in the sides, and will output it out the top. Power can always be "pulled" out the top, but a redstone signal will make the battery try and push power to any available receivers.
+		</desc>
+		<note>
+			The bar on the side is a fill bar with logarithmic scaling
+		</note>
+	</eubattery>
 	<cable>
 		<desc>
 			The RF Transfer cable is a specialized wire for transferring RF energy. It can transmit an unlimited amount of RF per tick, with the actual maximum of the network being fully customizable.
@@ -101,6 +129,14 @@
 			Multiple yellow dots marks the input; Orange dots mark output sides. Use the screwdriver to toggle sides between output and paneling
 		</note>
 	</eusplit>
+	<wirelesspad>
+		<desc>
+			The energy transfer pad wirelessly conducts RF energy from itself to a target block, allowing for conduits to remain below a floor or behind a wall. Better materials yield more throughput capacity and better efficiency.
+		</desc>
+		<note>
+			%s
+		</note>
+	</wirelesspad>
 	<name>
 		<desc>
 			

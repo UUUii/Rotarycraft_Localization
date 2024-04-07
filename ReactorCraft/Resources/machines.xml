@@ -24,14 +24,12 @@
 			The electrolyzer uses electrical discharges to decompose materials into their constituents, such as salt into sodium and chlorine or water into hydrogen and oxygen. The heavier of the products is drawn from the bottom, while the lighter is drawn from the top. Note that solids must be melted down before they are able to be processed.
 		</desc>
 		<note>
-			Power to electrolyze salt: %dW
-			Power Input: Any horizontal side
 			Required temperature to melt salt: %dC
 		</note>
 	</electrolyzer>
 	<synthesizer>
 		<desc>
-			The synthesizer is used to make ammonia, which is a more effective working fluid in reactors than water. To do this, it requires water, ammonium chloride, and quicklime.
+			The synthesizer is primarily used to make ammonia, which is a more effective working fluid in reactors than water. To do this, it requires water, ammonium chloride, and quicklime. It can also process a few other fluids.
 		</desc>
 		<note>
 			Ammonia Synthesis Temperature: %dC
@@ -110,6 +108,7 @@
 			Max Speed: %d rad/s
 			Max Torque: %d Nm
 			Risks: Blade breakage due to collisions with objects
+			Turbines require lubrication
 		</note>
 	</turbinecore>
 	<pebblebed>
@@ -258,7 +257,7 @@
 	</heavypump>
 	<fluidextractor>
 		<desc>
-			The fluid extractor, when submerged in (and has at least three sides in contact with) a fluid, can centrifuge it and obtain trace quantities of another fluid that was mixed in. For example, heavy water can be centrifuged out of the bottom of oceans (below y=%d and with at least %dm of water above), or molten lithium can be skimmed off the surface of lava.
+			The fluid extractor, when submerged in and surrounded by source blocks of a fluid, can centrifuge it and obtain trace quantities of another fluid that was mixed in. For example, heavy water can be centrifuged out of the bottom of oceans (below y=%d and with at least %dm of water above), or molten lithium can be skimmed off the surface of lava.
 		</desc>
 		<note>
 			Minimum Power: %dW
@@ -283,7 +282,7 @@
 	</storage>
 	<reflector>
 		<desc>
-			The neutron reflector has a chance of reflecting neutrons back in the direction from which they impacted the reflector. This allows for greater reactor efficiency by reusing a portion of the neutrons. Unreflected neutrons are absorbed.
+			The neutron reflector has a chance of reflecting neutrons back in the direction from which they impacted the reflector. This allows for greater reactor efficiency by reusing a portion of the neutrons. Unreflected neutrons have a chance to be absorbed.
 		</desc>
 		<note>
 
@@ -291,10 +290,12 @@
 	</reflector>
 	<generator>
 		<desc>
-			The generator convers shaft power directly from a turbine into RF power for ease of transport or use in other mods. Note that it is a multiblock that must be directly connected to the turbine. Also be aware that the extreme power supply this generator provides exceeds the capacities of many RF transport systems.
+			The generator convers shaft power directly from a turbine into other forms of power for ease of transport or use in other mods. Note that it is a multiblock that must be directly connected to the turbine. Also be aware that the extreme power supply this generator provides exceeds the capacities of many transport systems.
 		</desc>
 		<note>
-			RF Output: Back
+			Converted Output: Back
+			
+			Can be mode-switched with the screwdriver
 		</note>
 	</generator>
 	<bigturbine>
@@ -303,6 +304,8 @@
 		</desc>
 		<note>
 			Max Speed: %d rad/s
+			
+			Can be disabled with a redstone input to any of the injector blocks
 		</note>
 	</bigturbine>
 	<turbinemeter>
@@ -341,7 +344,7 @@
 	</diffuser>
 	<thorium>
 		<desc>
-			Thorium reactor cores use molten thorium fuel salts to generate electricity. Rather unique compared to other fission reactors, they are not self-sufficient and require neutron flux in order to start. Additionally, the temperature-dependent neutron fertility means that as the temperature rises, they become less reactive, as a natural safeguard. The thorium fuel cycle also produces less waste than that of uranium.
+			Thorium reactor cores use molten thorium fuel salts (Thorium-enriched FLiBe) to generate electricity. Rather unique compared to other fission reactors, they are not self-sufficient and require heat and neutron flux in order to start. Additionally, the temperature-dependent neutron fertility means that as the temperature rises, they become less reactive, as a natural safeguard. The thorium fuel cycle also produces less waste than that of uranium.
 		</desc>
 		<note>
 
@@ -352,7 +355,56 @@
 			In the event of exceeding a critical temperature of %dC, a thorium reactor will trigger an emergency fuel dump in order to avoid a meltdown. This can cause a radiation leak, and is to be avoided if possible.
 		</desc>
 		<note>
-
+			Placed below the fuel column, and will trigger automatically to perform a dump
 		</note>
 	</fueldump>
+	<solartop>
+		<desc>
+			The %s allows you to use molten sodium instead of water in the solar tower, which greatly increases its power output and efficiency.
+		</desc>
+		<note>
+			Two units must be stacked on top of the tower to function
+		</note>
+	</solartop>
+	<solar>
+		<desc>
+			The %s allows you to get hot molten sodium out of a solar plant instead of direct shaft power. Though this is more complex, the power output is substantially larger.
+		</desc>
+		<note>
+			Placed below the tower column
+			Requires %dW at %d rad/s
+		</note>
+	</solar>
+	<wastedecayer>
+		<desc>
+			The forced fission chamber is used to bombard nuclear waste with neutrons to encourage it to fragment into products which are more easily disposed of than the original isotopes.
+		</desc>
+		<note>
+			Operates most efficiently around %dC and with fast neutrons (if enabled)
+		</note>
+	</wastedecayer>
+	<name>
+		<desc>
+			
+		</desc>
+		<note>
+			
+		</note>
+	</name>
+	<name>
+		<desc>
+			
+		</desc>
+		<note>
+			
+		</note>
+	</name>
+	<name>
+		<desc>
+			
+		</desc>
+		<note>
+			
+		</note>
+	</name>
 </machines>

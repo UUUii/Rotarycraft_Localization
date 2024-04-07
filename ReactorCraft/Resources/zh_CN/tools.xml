@@ -1,15 +1,15 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <tools>
 	<goggles>
-		Radiation Goggles allows radiation to become visible, allowing for easier avoidance and potential cleanup.
+		辐射护目镜允许你直面辐射，从而更容易避免和清理辐射。
 	</goggles>
 	<remote>
-		The CPU remote is a way to control the CPU of a fission reactor at a distance, without having to enter the reactor itself.
+		遥控控制器是一种远程控制裂变反应堆控制器的工具，有它就无需接近反应堆本身。
 	</remote>
 	<geiger>
-		The geiger counter can detect radiation, and will click more intensely as radiation levels rise.
+		盖革计数器可以检测辐射，并且随着辐射水平的升高会发出更强烈的咔嗒声。
 	</geiger>
 	<cleaner>
-		The radiation cleaning tool sprays water over an area to wash away radioactive particles, slowly cleaning it of radiation.
+		辐射清洁工具通过向一个区域喷水以洗掉放射性粒子，慢慢清除辐射。
 	</cleaner>
 </tools>

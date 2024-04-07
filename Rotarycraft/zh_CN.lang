@@ -128,6 +128,16 @@ machine.centrifuge=离心机
 machine.bedpipe=基岩管
 machine.drying=干燥床
 machine.wetter=加湿器
+machine.drops=方块破坏器
+machine.itemfilter=物品过滤器
+machine.hydrator=洒水器
+machine.filler=方块填充器
+machine.gatling=加特林炮台
+machine.spillway=汲液器
+machine.flameturret=火焰炮塔
+machine.bundledbus=ME集束输出总线
+machine.distribclutch=轴分配离合器
+machine.splitbelt=定扭矩引出带
 
 engine.dc=直流电动引擎
 engine.wind=风力涡轮机
@@ -145,6 +155,9 @@ material.steel=钢
 material.diamond=钻石
 material.bedrock=基岩
 material.hsla=HSLA钢
+material.tungsten=钨钢合金
+material.livingwood=活木
+material.livingrock=活石
 
 shaft.wood=木轴
 shaft.stone=石轴
@@ -153,15 +166,18 @@ shaft.diamond=钻石轴
 shaft.bedrock=基岩轴
 shaft.cross=十字轴
 
-flywheel.wood=木质飞轮
-flywheel.stone=石质飞轮
-flywheel.iron=铁质飞轮
-flywheel.gold=金质飞轮
-
 advgear.worm=蜗齿
 advgear.cvt=无级变速器
 advgear.coil=工业线圈
 advgear.hi=高速比传动器
+
+flywheel.wood=木质飞轮
+flywheel.stone=石质飞轮
+flywheel.iron=铁质飞轮
+flywheel.gold=金质飞轮
+flywheel.tungsten=钨钢飞轮
+flywheel.depletedu=贫铀飞轮
+flywheel.bedrock=基岩飞轮
 
 hydraulic.pump=液压泵
 hydraulic.turbine=液压轮机
@@ -258,6 +274,11 @@ item.bedreveal=基岩揭示头盔
 item.steelpack=HSLA钢背包
 item.craftpattern=合成样板
 item.rangefinder=测距仪
+item.gearupgrade=综合变速升级
+item.springpiston=手持活塞
+item.voidrailgun=虚空金属轨道炮弹药
+item.bedchisel=基岩合金凿子
+item.beddrill=基岩钻头
 
 extract.coaldust=煤粉
 extract.irondust=铁粉
@@ -306,35 +327,29 @@ crafting.cylinder=气缸
 crafting.radiator=散热器
 crafting.condenser=冷凝器
 crafting.goldcoil=金线圈
-crafting.woodgear=木质齿轮
-crafting.stonegear=石质齿轮
-crafting.diamondgear=钻石齿轮
-crafting.bedrockgear=基岩齿轮
 crafting.paddle=木浆板
-crafting.shaftcore=轴芯
 crafting.ignition=点火装置
-crafting.diamondcore=钻石轴芯
 crafting.compoundcompress=复式压缩机
 crafting.alucylinder=铝合金气缸
 crafting.highcombustor=高温燃烧室
 
 crafting.panel=材料板
 crafting.ingot=HSLA钢锭
-crafting.shaft=轴单元
-crafting.gear=HSLA钢齿轮
 crafting.mount=支架
+crafting.scrap=HSLA钢废料
+crafting.ironscrap=铁废料
+crafting.worm=蜗齿
+
+crafting.shaft=轴单元
+crafting.gear=齿轮
 crafting.gear2=2x齿轮单元
 crafting.gear4=4x齿轮单元
 crafting.gear8=8x齿轮单元
 crafting.gear16=16x齿轮单元
-crafting.scrap=HSLA钢废料
-crafting.ironscrap=铁废料
-crafting.woodcore=木质飞轮核心
-crafting.stonecore=石质飞轮核心
-crafting.ironcore=铁质飞轮核心
-crafting.goldcore=金质飞轮核心
-crafting.worm=蜗齿
-crafting.gearunit=齿轮单元
+crafting.bearing=轴承
+crafting.shaftcore=轴芯
+
+crafting.flycore=飞轮核心
 
 crafting.barrel=热射线枪管
 crafting.lens=激光
@@ -351,7 +366,7 @@ crafting.aiming=炮塔瞄准单元
 crafting.compound=复式涡轮机
 crafting.bedcoil=基岩张力线圈
 crafting.chain=链索
-crafting.beddrill=基岩钻头
+crafting.beddrill=基岩合金钻头
 
 crafting.drill=钻头
 crafting.pressure=压力头
@@ -361,14 +376,10 @@ crafting.pcb=电路板
 crafting.screen=屏幕
 crafting.mixer=混合器
 crafting.saw=锯子
-crafting.bearing=轴承
 crafting.belt=皮带
 crafting.ballbearing=滚珠轴承
 crafting.brake=刹车片
 crafting.coil=低压线圈
-crafting.stoneshaft=石棒
-crafting.diamondshaft=钻石轴单元
-crafting.bedrockshaft=基岩轴单元
 
 misc.netherdust=下届石粉
 misc.tar=沥青砂
@@ -386,6 +397,7 @@ misc.redgolddust=感应金属混合物
 misc.compost=堆肥
 misc.silicondust=硅粉
 misc.mulch=覆盖戍
+misc.cleansludge=乙醇溶液
 
 misc.anthra=无烟煤
 misc.prisma=棱晶烷
@@ -399,6 +411,7 @@ misc.coke=焦煤
 misc.springingot=活性钢锭
 misc.silicon=硅
 misc.alualloy=铝合金锭
+misc.tungalloy=钨钢合金锭
 
 interface.slipperycomb=润滑蜂巢
 interface.slipperypropolis=润滑蜂胶
@@ -417,6 +430,8 @@ upgrade.tier5=抗扭强度升级组件
 upgrade.afterburn=再燃装置升级组件
 upgrade.efficiency=谐振稳定升级组件
 upgrade.flux=通量振幅升级组件
+upgrade.redstone=集成红石升级
+upgrade.lodestone=恒定磁力升级
 
 label.temperature=温度
 label.pressure=压力
@@ -426,8 +441,10 @@ label.power=功率
 label.range=范围
 label.damaged=损坏的
 label.fuel=剩余燃料
+label.operationtime=运行时间
 
 message.drowning=引擎进水!
+message.noair=引擎通风口堵塞!
 message.fod=引擎被动物损坏!
 message.choke=引擎通风口被损坏!
 message.minpower=功率不足!
@@ -439,6 +456,10 @@ message.emptypipe=管道内没有流体.
 
 achievement.makesteel=钢材制造者
 achievement.makesteel.desc=在高炉里制作一块HSAL钢锭
+achievement.rcusebook=动手研究
+achievement.rcusebook.desc=在你将它称为bug之前多看看看书
+achievement.worktable=伟大的一步
+achievement.worktable.desc=放下工作台
 achievement.makeyeast=发酵机
 achievement.makeyeast.desc=使用发酵机发酵物品
 achievement.extractor=翻倍吧
@@ -519,5 +540,14 @@ achievement.doublekill=一石二鸟
 achievement.doublekill.desc=用燧石枪一次击杀2只怪物
 achievement.insanity=精神错乱
 achievement.insanity.desc=使提取器在1-tick内运作4个阶段
+achievement.instantbed=狂乱
+achievement.instantbed.desc=使基岩破坏机在1-tick内运作1个阶段
+achievement.failsteel=材料回收
+achievement.failsteel.desc=炼钢时浪费大量铁
+achievement.pulsefire=纵火犯
+achievement.pulsefire.desc=失手烧掉你家
+achievement.dumbextractor=它是怎么工作的
+achievement.dumbextractor.desc=分配能量失误
 
 tc.research_category.rotarycraft=旋转工艺
+item.item.screwfocus.name=法杖核心：螺丝刀

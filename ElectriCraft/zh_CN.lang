@@ -9,6 +9,11 @@ machine.wiremeter=电表
 machine.rfbattery=RF储存电池
 machine.transformer=变压器
 machine.eusplit=EU储存电池
+machine.eucable=超导EU电缆
+machine.eubattery=EU存储电池 (RBSU)
+machine.fuse=保险丝
+machine.wirelesspad=无线能量传输板
+machine.precresistor=精密电阻
 
 battery.redstone=红石电池
 battery.glowstone=萤石电池
@@ -24,11 +29,18 @@ energycrystal.star=下界之星能量水晶
 energycrystal.diamond=钻石能量水晶
 energycrystal.ender=末影能量水晶
 energycrystal.rf=RF能量水晶
+energycrystal.eu=EU能量水晶
 
 electricrafting.bluedust=青金石粉
 electricrafting.diamonddust=钻石粉
 electricrafting.quartzdust=石英粉
 electricrafting.crystaldust=能量水晶粉
+
+electrichargepad.basic=基础
+electrichargepad.improved=进阶
+electrichargepad.advanced=高级
+electrichargepad.hightech=先进
+electrichargepad.superconducting=超导
 
 ore.copper=铜矿
 ore.tin=锡矿
